@@ -1,0 +1,186 @@
+:root {
+
+    /* Primary */
+
+    --Very-dark-blue: hsl(233, 47%, 7%); /* Main background */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /* Card background */
+    --Soft-violet: hsl(277, 64%, 61%); /* Accent */
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%); /* Main heading & Stats */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75); /* Main paragraph */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6); /* Stat Headings */
+
+}
+
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+
+/* General Configuration */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Image design */
+
+.image {
+    background-image: url(../images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    width: 330px;
+    height: 240px;
+}
+
+.background-image {
+    background-color: rgba(170, 92, 219, 0.55);
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    width: 330px;
+    height: 240px;
+}
+
+
+/* General content design */
+
+.content {
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 0 0 10px 10px;
+    width: 330px;
+    height: 540px;
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    
+}
+
+.text h3 {
+    color: var(--White);
+    font-size: 27px;
+    padding-top: 37px;
+    margin: 0 auto;
+    width: 260px;
+}
+
+.text h3 span {
+    color: var(--Soft-violet);
+}
+
+.text p {
+    color: var(--Slightly-transparent-white);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    padding-top: 23px;
+    margin: 0 auto;
+    width: 260px;
+}
+
+
+/* Stats design */
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.stat {
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+
+.stat h3 {
+    color: var(--White);
+    font-size: 24px;
+    margin: 30px 0 10px 0;
+}
+
+.stat p {
+    color: var(--Slightly-transparent-white);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+/* Desktop design */
+
+@media (min-width: 1440px) {
+    
+    /* Card, content & stats configuration */
+
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .content {
+        border-radius: 10px 0 0 10px;
+        margin: 0;
+        width: 525px;
+        height: 400px;
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    .text h3 {
+        font-size: 35px;
+        margin: 30px 0 0 70px;
+        width: 400px;
+    }
+    
+    .text p {
+        margin: 0 0 0 70px;
+        width: 360px;
+
+    }
+
+    .stats {
+        flex-direction: row;
+        justify-content: left;
+        margin: 15px 0 0 70px;
+    }
+
+    .stat {
+        text-align: left;
+        margin: 0 70px 0 0;
+    }
+
+
+    /* Image configuration */
+
+    .image {
+        border-radius: 0 10px 10px 0;
+        margin: 0;
+        width: 450px;
+        height: 400px;
+    }
+    
+    .background-image {
+        border-radius: 0 10px 10px 0;
+        width: 450px;
+        height: 400px;
+    }
+}
